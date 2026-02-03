@@ -16,11 +16,30 @@ namespace AppCalculadora
         {
             try
             {
-                int a = 0, b = 0, resultado = 0;
-                a = int.Parse(textBox1.Text);
-                b = int.Parse(textBox2.Text);
-                resultado = a + b;
-                MessageBox.Show("El resultado es:" + resultado.ToString(), "Siztema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                double a = 0, b = 0, resultado = 0;
+                a = Convert.ToDouble(this.textBox1.Text);
+                b = double.Parse(this.textBox2.Text);
+                if (rdbSuma.Checked)
+                {
+                    resultado = a + b;
+                    MessageBox.Show("El resultado es:" + resultado.ToString(), "Siztema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (rdbResta.Checked)
+                {
+                    resultado = a - b;
+                    MessageBox.Show("El resultado es:" + resultado.ToString(), "Siztema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (rdbMulti.Checked)
+                {
+                    resultado = a * b;
+                    MessageBox.Show("El resultado es:" + resultado.ToString(), "Siztema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (rdbDivision.Checked)
+                {
+                    resultado = a / b;
+                    MessageBox.Show("El resultado es:" + resultado.ToString(), "Siztema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
             catch (Exception)
             {

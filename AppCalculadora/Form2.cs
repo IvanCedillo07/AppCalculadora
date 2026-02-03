@@ -8,11 +8,28 @@ using System.Windows.Forms;
 
 namespace AppCalculadora
 {
-    public partial class Form2 : Form
+    public partial class frmMenu : Form
     {
-        public Form2()
+        public frmMenu()
         {
             InitializeComponent();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void calculadoraSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 calcuSimple = new Form1();
+            calcuSimple.Show();
+        }
+
+        private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 Burbuja = new Form3();
+            Burbuja.Show();
         }
     }
 }
