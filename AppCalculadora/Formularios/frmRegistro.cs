@@ -19,7 +19,7 @@ namespace AppCalculadora.Formularios
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            personas.Add(new Persona() { Nombre = txtNombre.Text,Apellidos = txtApellidos.Text, Fecha = dtpFechaNacimiento.Value });
+            personas.Add(new Persona() { Nombre = txtNombre.Text, Apellidos = txtApellidos.Text, Fecha = dtpFechaNacimiento.Value });
             MessageBox.Show("Persona registrada con exito");
             txtApellidos.Clear();
             txtNombre.Clear();
@@ -31,8 +31,27 @@ namespace AppCalculadora.Formularios
             if (tabControl1.SelectedIndex == 1)
             {
                 dgvMostrar.DataSource = null;
-                dgvMostrar.DataSource=personas;
+                dgvMostrar.DataSource = personas;
+                verificarRegistro();
             }
+        }
+
+        private void verificarRegistro()
+        {
+            if (personas.Count == 0)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+                btnEliminar.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            personas.RemoveAt(dgvMostrar.CurrentRow.Index);
+            dgvMostrar.DataSource = null;//Limpiar el dtg
+            dgvMostrar.DataSource = personas;//Vuelve a llenar el Dtg
+            verificarRegistro();
         }
     }
 }
