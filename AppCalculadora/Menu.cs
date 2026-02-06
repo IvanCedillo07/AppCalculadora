@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCalculadora.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,12 @@ namespace AppCalculadora
         {
             Form3 Burbuja = new Form3();
             Burbuja.Show();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistro registro= new frmRegistro();
+            registro.Show();
         }
     }
 }
