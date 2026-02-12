@@ -23,7 +23,7 @@ namespace AppCalculadora
 
         private void calculadoraSimpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 calcuSimple = new Form1();
+            frmEditor calcuSimple = new frmEditor();
             calcuSimple.Show();
         }
 

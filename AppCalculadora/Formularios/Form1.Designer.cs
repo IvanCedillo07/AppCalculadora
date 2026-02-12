@@ -1,6 +1,6 @@
 ﻿namespace AppCalculadora
 {
-    partial class Form1
+    partial class frmEditor
     {
         /// <summary>
         ///  Required designer variable.
