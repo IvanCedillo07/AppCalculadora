@@ -35,8 +35,20 @@ namespace AppCalculadora
 
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistro registro= new frmRegistro();
+            frmRegistro registro = new frmRegistro();
             registro.Show();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditor editor = new frmEditor();
+            editor.Show();
+        }
+
+        private void contadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContador conta = new frmContador();
+            conta.Show();
         }
     }
 }

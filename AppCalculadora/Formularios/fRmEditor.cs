@@ -14,7 +14,7 @@ namespace AppCalculadora.Formularios
         string texto = "";
         string path = "";
         int contadorpalabras = 0;
-        int contadorletras=0;
+        int contadorletras = 0;
         public fRmEditor()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace AppCalculadora.Formularios
 
         private void rchEditar_TextChanged(object sender, EventArgs e)
         {
-             texto = rchEditar.Text;
+            texto = rchEditar.Text;
             string[] palabras = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             contadorpalabras = palabras.Length;
             contadorletras = texto.Length;
@@ -92,10 +92,26 @@ namespace AppCalculadora.Formularios
 
         private void stsLPalabras_Click(object sender, EventArgs e)
         {
-           
+
             string[] parrafos = texto.Split(new char[] { 'n' }, StringSplitOptions.RemoveEmptyEntries);
-            MessageBox.Show("Estadisticas:\n\nPalabras:"+" "+contadorpalabras+"\n\nCaracteres:"+texto.Length.ToString()
-                +"\n\nParrafos:"+parrafos.Length.ToString(), "Contador de palabras");
+            MessageBox.Show("Estadisticas:\n\nPalabras:" + " " + contadorpalabras + "\n\nCaracteres:" + texto.Length.ToString()
+                + "\n\nParrafos:" + parrafos.Length.ToString(), "Contador de palabras");
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ftdEditor.ShowDialog() == DialogResult.OK)
+            {
+                rchEditar.Font = ftdEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (cldEditor.ShowDialog() == DialogResult.OK)
+            {
+                rchEditar.ForeColor = cldEditor.Color;
+            }
         }
     }
 }
