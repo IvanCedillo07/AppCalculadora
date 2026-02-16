@@ -38,6 +38,7 @@
             registroToolStripMenuItem = new ToolStripMenuItem();
             editorToolStripMenuItem = new ToolStripMenuItem();
             contadorToolStripMenuItem = new ToolStripMenuItem();
+            xmlDirectorioToolStripMenuItem = new ToolStripMenuItem();
             mnsPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registroToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem, xmlDirectorioToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -114,6 +115,13 @@
             contadorToolStripMenuItem.Text = "Contador";
             contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
             // 
+            // xmlDirectorioToolStripMenuItem
+            // 
+            xmlDirectorioToolStripMenuItem.Name = "xmlDirectorioToolStripMenuItem";
+            xmlDirectorioToolStripMenuItem.Size = new Size(224, 26);
+            xmlDirectorioToolStripMenuItem.Text = "Xml Directorio";
+            xmlDirectorioToolStripMenuItem.Click += xmlDirectorioToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -141,5 +149,6 @@
         private ToolStripMenuItem registroToolStripMenuItem;
         private ToolStripMenuItem editorToolStripMenuItem;
         private ToolStripMenuItem contadorToolStripMenuItem;
+        private ToolStripMenuItem xmlDirectorioToolStripMenuItem;
     }
 }

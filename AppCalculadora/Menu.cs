@@ -50,5 +50,11 @@ namespace AppCalculadora
             frmContador conta = new frmContador();
             conta.Show();
         }
+
+        private void xmlDirectorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmXlacces xmlacs = new frmXlacces();
+            xmlacs.Show();
+        }
     }
 }
